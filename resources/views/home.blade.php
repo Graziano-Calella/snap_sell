@@ -26,7 +26,7 @@
         </div>
         <div class="container-header">
           <div class="content-header watch transition">
-            <h1 class="title-header">Trade, Click, Smile!: <br> <strong>{{__('ui.home')}}</strong></h1>
+            <h1 class="title-header">Trade, Click, Smile: <br> <strong>{{__('ui.home')}}</strong></h1>
             <div class="content-addAds">
               <div class="col-12 col-lg-6">
                 <p> {{__('ui.home2')}}<br><strong>{{__('ui.home3')}}</strong></p>

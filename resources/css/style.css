@@ -1,142 +1,6 @@
 *{
     font-family: 'Montserrat', sans-serif;
 }
-
-body{
-    background-color:rgb(245, 245, 245);
-}
-
-.bg-image{
-    color: rgb(0, 175, 185) !important; 
-}
-
-nav a{
-    font-size: 20px !important;
-    color: #17c6cf !important; 
-    text-shadow: 1px 1px 1px black;
-    font-weight: 600 !important;
-}
-
-.custom{
-    height: 60px;
-}
-
-.h1-home{
-    font-size: 12vw;
-    text-shadow: 3px 3px 3px black;
-}
-
-@media screen and (min-width:0px) and (max-width:1023px){
-    .h1-home{
-        font-size: 70px;
-        text-shadow: 3px 3px 3px black;
-    }
-    
-
-}
-
-.h1-viste{
-    font-size: 4vw;
-    text-shadow: 3px 3px 3px black;
-}
-
-@media screen and (min-width:0px) and (max-width:1023px){
-    .h1-viste{
-        font-size: 40px;
-        text-shadow: 3px 3px 3px black;
-    }
-
-}
-
-.h2-home{
-    font-size: 3vw;
-    text-shadow: 3px 3px 3px black;
-}
-
-@media screen and (min-width:0px) and (max-width:1023px){
-    .h2-home{
-        font-size: 25px;
-        text-shadow: 3px 3px 3px black;
-    }
-
-}
-.h2-home-mus{
-    font-size: 3vw;
-    text-shadow: 1px 1px 1px black;
-}
-
-
-
-.sottotitoli{
-    font-size: 4vw;
-    text-shadow: 1px 1px 1px black;
-    font-weight: 500;
-}
-
-@media screen and (min-width:0px) and (max-width:1023px){
-    .sottotitoli{
-        font-size: 50px;
-        text-shadow: 1px 1px 1px black;
-        font-weight: 500;
-    }
-
-}
-/* START swiper header home ----------------------------------------------------------------------------------------------- */
-
-
-
-
-/* END swiper header home ------------------------------------------------------------------------------------------------- */
-
-/* card-transition */
-.transition-card1{
-    opacity: 0;
-    transform: translateY(-50px);
-    /* transition: all 1.2s ease; */
-}
-
-.transition-card1.in-page{
-    animation: scrollX 1s ease forwards;
-    animation-delay: 0.3s;
-}
-
-
-.transition-card2{
-    opacity: 0;
-    transform: translateY(-50px);
-    /* transition: all 1.2s ease; */
-}
-
-.transition-card2.in-page{
-    animation: scrollX 1s ease forwards;
-    animation-delay: 0.6s;
-}
-
-.transition-card3{
-    opacity: 0;
-    transform: translateY(-50px);
-    /* transition: all 1.2s ease; */
-}
-
-.transition-card3.in-page{
-    animation: scrollX 1s ease forwards;
-    animation-delay: 0.9s;
-}
-
-
-@keyframes scrollX {
-    from { 
-        opacity: 0;
-        transform: translateY(-150px)
-    }to{
-        opacity: 1;
-        transform: translateX(0px); 
-    }   
-}
-/* card-transition end*/
-
-
-
 :root{
     --col-vinted-custom: #00afb9;
     --col-vinted_custom2: #17c6cf;
@@ -148,27 +12,117 @@ nav a{
     --col-start-card2: hsl(158, 36%, 23%);
 }
 
-/* navbar */
-.bg-nav{
-    transition: 0.5s;
-    background-color: rgba(244, 244, 244, 0.9);
+body{
+    /* background-color:rgb(245, 245, 245); */
+    background-color: #F8F9F4;
 }
 
-@media screen and (min-width:0px) and (max-width:1023px){
-    .bg-nav-mobile{
-        background-color: rgba(244, 244, 244, 0.9);
+/* START navbar --------------------------------------------------------------------------------------------------------------*/
+nav a{
+    color: white !important;
+    font-size: 20px !important;
+    text-transform: uppercase;
+    font-weight: 500 !important;
+}
+
+.custom{
+    height: 60px;
+}
+.bg-nav{
+    background-color: rgba(244, 244, 244, 0.9) !important;
+}
+.bg-nav a{
+    color: var(--col-vinted) !important;
+}
+
+.bg-nav-start{
+    position: fixed;
+    top: 0;
+    z-index: 500;
+    transition: 0.5s;
+    width: 100%;
+    background-color: rgba(244, 244, 244, 0.3);
+    backdrop-filter: blur(6px) saturate(0.6);
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.08);
+}
+
+@media screen and (max-width: 576px){
+    nav a{
+        font-size: 16px !important;
     }
 }
-
+.dropd-item{
+    background-color: white !important;
+    color: var(--col-vinted) !important;
+}
 .dropd-item:hover{
-    background-color: #00afb9 !important;
+    background-color: var(--col-vinted) !important;
     color: white !important;
 }
 
 .bg-notification{
-    background-color: #00afb9 !important;
+    background-color: var(--col-vinted) !important;
 }
-/* navbar end */
+.mt-custom{
+    margin-top: 4.5rem;
+}
+.color-custom{
+    color: var(--col-vinted);
+}
+/* END navbar ----------------------------------------------------------------------------------------------------------------*/
+
+
+.sottotitoli{
+    font-size: 4vw;
+    font-weight: 500;
+    color: var(--col-vinted);
+}
+
+@media screen and (min-width:0px) and (max-width:1023px){
+    .sottotitoli{
+        font-size: 50px;
+        text-shadow: 1px 1px 1px black;
+        font-weight: 500;
+    }
+}
+
+
+/* START card-transition -----------------------------------------------------------------------------------------------------*/
+.transition-card1{
+    opacity: 0;
+    transform: translateY(-50px);
+}
+.transition-card1.in-page{
+    animation: scrollX 1s ease forwards;
+    animation-delay: 0.3s;
+}
+.transition-card2{
+    opacity: 0;
+    transform: translateY(-50px);
+}
+.transition-card2.in-page{
+    animation: scrollX 1s ease forwards;
+    animation-delay: 0.6s;
+}
+.transition-card3{
+    opacity: 0;
+    transform: translateY(-50px);
+}
+.transition-card3.in-page{
+    animation: scrollX 1s ease forwards;
+    animation-delay: 0.9s;
+}
+
+@keyframes scrollX {
+    from { 
+        opacity: 0;
+        transform: translateY(-150px)
+    }to{
+        opacity: 1;
+        transform: translateX(0px); 
+    }   
+}
+/* END card-transition -------------------------------------------------------------------------------------------------------*/
 
 /* START codice header ---------------------------------------------------------------------------------------------------- */
 .transition{
@@ -876,27 +830,16 @@ a.cta i{
     width:150px;
 }
 
-.linkedin-custom{
-    color: #00afb9;
-}
-
 .a-footer{
     font-size: 20px;
     color: #000000;
 }
-
-.a-footer:hover{
-    border-bottom:1px solid #00afb9;
+.color-custom-footer{
+    background-color: rgba(0, 0, 0, 0.05);
 }
-
-.separate{
-    border: 1px solid rgba(0, 176, 185, 0.5);
-    width: 100%;
-    box-shadow: 1px 1px 1px rgb(171, 171, 171);
-}
-
-.bg-footer{
+footer{
     background-color: rgb(233, 233, 233);
+    border-top: 2px solid var(--col-vinted);
 }
 /* End FOOTER ------------------------------------------------------------------------------------------------------------- */
 
@@ -1118,7 +1061,6 @@ a.cta i{
     background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0, 0.3)), url(/public/img/sfondochisiamo.jpg);
     background-position: center;
     background-size: cover;
-    margin-top: 100px;
 }
 
 .nome-card{
@@ -1547,6 +1489,8 @@ textarea.form-control.is-invalid{
     }
 }
 /* END create ads ----------------------------------------------------------------------------------------------------------- */
+
+/* START report AI in revisor ----------------------------------------------------------------------------------------------- */
 .contentReportAI{
     display: flex;
     padding: 10px;
@@ -1630,5 +1574,5 @@ textarea.form-control.is-invalid{
     background-color: var(--col-vinted-custom) !important;
     color: white !important;
     border-color: var(--col-vinted-custom) !important;
-
 }
+/* END report AI in revisor ------------------------------------------------------------------------------------------------- */

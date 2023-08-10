@@ -15,15 +15,18 @@ watch.forEach(element => {
 
 // START animation color navbar ----------------------------------------------------------------------------------------------
 let navbar = document.querySelector('#navbar');
-window.addEventListener('scroll', ()=>{
-    let scrolled = window.scrollY;
-    if (scrolled > 0) {
-        navbar.classList.add("bg-nav");
-    }else{
-        navbar.classList.remove("bg-nav");
-        navbar.classList.add("bg-nav-mobile");
-    }
-});
+if (window.location.pathname !== "/register" && window.location.pathname !== "/login" && window.location.pathname !== "/announcement/create") {
+    window.addEventListener('scroll', ()=>{
+        let scrolled = window.scrollY;
+        if (scrolled > 5) {
+            navbar.classList.add("bg-nav");
+        }else{
+            navbar.classList.remove("bg-nav");
+        }
+    });
+}else{
+    navbar.classList.add("bg-nav");
+}
 // END animation color navbar ------------------------------------------------------------------------------------------------
 
 // START controllo swiper del dettaglio --------------------------------------------------------------------------------------

@@ -1,4 +1,4 @@
-<nav id="navbar" class="navbar navbar-expand-lg fixed-top bg-nav-mobile">
+<nav id="navbar" class="navbar navbar-expand-lg bg-nav-start">
     <div class="container-fluid">
         <img src="/img/logo4.png" class="custom" alt="">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -7,11 +7,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                <li class="nav-item color-custom">
-                    <a class="color-custom nav-link px-4" aria-current="page" href="{{ route('home') }}">Home</a>
+                <li class="nav-item">
+                    <a class="nav-link px-4" aria-current="page" href="{{ route('home') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active color-custom px-4" aria-current="page"
+                    <a class="nav-link active px-4" aria-current="page"
                         href="{{ route('announcement.index') }}">{{ __('ui.navbar1') }}</a>
                 </li>
                 <li class="nav-item dropdown">
@@ -37,16 +37,12 @@
                         @endforeach
                     </ul>
                 </li>
-                <li class="nav-item px-3">
-                    <x-_locale lang="it" nation="it" />
-                </li>
-                <li class="nav-item px-3">
-                    <x-_locale lang="en" nation="gb" />
-                </li>
-                <li class="nav-item px-3">
-                    <x-_locale lang="es" nation="es" />
-                </li>
             </ul>
+            <div class="nav-item mx-auto ">
+                <x-_locale lang="it" nation="it" />
+                <x-_locale lang="en" nation="gb" />
+                <x-_locale lang="es" nation="es" />
+            </div>
             @guest
                 <div class="nav-item px-4 py-2">
                     <a class="nav-link" href="{{ route('register') }}">{{ __('ui.navbar3') }}</a>
@@ -61,11 +57,11 @@
                         {{ __('ui.benvenuto') }} {{ Auth::user()->name }}
                     </a>
                     <ul class="dropdown-menu p-0 m-0">
-                        <li><a class="dropdown-item dropd-item" href="{{ route('announcement.create') }}">{{ __('ui.create') }}</a>
+                        <li><a class="dropdown-item dropd-item" href="{{route('announcement.create')}}">{{ __('ui.create') }}</a>
                         </li>
                         @if (Auth::user()->is_revisor)
                             <li>
-                                <a class="dropdown-item dropd-item btn btn-outline-success btn-sm position-relative"
+                                <a class="dropdown-item dropd-item position-relative"
                                     aria-current="page" href="{{ route('revisor.index') }}">
                                     {{ __('ui.zonaRevisore') }}
                                     <span

@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container py-5 mt-5">
+    <div class="container py-5 mt-custom">
         <div class="row justify-content-center p-3 p-md-0">
             <div class="row col-12 col-xl-10 rl-content">
                 <div class="panels-container col-12 col-md-5">

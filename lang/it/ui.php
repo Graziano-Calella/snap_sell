@@ -1,5 +1,5 @@
 <?php
-return['allAnnouncement'=>'Ecco i nostri annunci',
+return['allAnnouncement'=>'Ultimi annunci in primo piano',
        'home'=>'Acquista ora e risparmia!',
        'home1'=>'Crea nuovo annuncio',
        'home2'=>'Dai vita alle tue offerte',

@@ -8,14 +8,14 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link px-4" aria-current="page" href="{{ route('home') }}">Home</a>
+                    <a class="nav-link px-4 link-custom" aria-current="page" href="{{ route('home') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active px-4" aria-current="page"
+                    <a class="nav-link px-4 link-custom" aria-current="page"
                         href="{{ route('announcement.index') }}">{{ __('ui.navbar1') }}</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle px-4" href="#" id="categoriesDropdown" role="button"
+                    <a class="nav-link dropdown-toggle px-4 link-custom" href="#" id="categoriesDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         {{ __('ui.navbar2') }}
                     </a>
@@ -45,14 +45,14 @@
             </div>
             @guest
                 <div class="nav-item px-4 py-2">
-                    <a class="nav-link" href="{{ route('register') }}">{{ __('ui.navbar3') }}</a>
+                    <a class="nav-link link-custom" href="{{ route('register') }}">{{ __('ui.navbar3') }}</a>
                 </div>
                 <div class="nav-item px-4 py-2">
-                    <a class="nav-link" href="{{ route('login') }}">{{ __('ui.navbar4') }}</a>
+                    <a class="nav-link link-custom" href="{{ route('login') }}">{{ __('ui.navbar4') }}</a>
                 </div>
             @else
                 <div class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle px-4 py-2" href="#" role="button" data-bs-toggle="dropdown"
+                    <a class="nav-link dropdown-toggle px-4 py-2 link-custom" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         {{ __('ui.benvenuto') }} {{ Auth::user()->name }}
                     </a>

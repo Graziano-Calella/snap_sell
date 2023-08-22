@@ -52,7 +52,7 @@
     </div>
   </div>
   {{-- Start ultimi sei annunci ----------------------------------------------------------------------------------------- --}}
-  <div class="container py-5 bg-image">
+  <div class="container pt-5 bg-image">
     <div class="row">
       <div class="col-12 text-center">
         <h2 class="display-5 sottotitoli">{{__('ui.allAnnouncement')}}</h2>

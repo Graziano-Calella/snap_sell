@@ -18,11 +18,13 @@ body{
 }
 
 /* START navbar --------------------------------------------------------------------------------------------------------------*/
-nav a{
-    color: white !important;
+.navbar a{
     font-size: 20px !important;
     text-transform: uppercase;
     font-weight: 500 !important;
+}
+.link-custom{
+    color: white !important;
 }
 
 .custom{
@@ -34,6 +36,7 @@ nav a{
 .bg-nav a{
     color: var(--col-vinted) !important;
 }
+
 
 .bg-nav-start{
     position: fixed;
@@ -47,7 +50,7 @@ nav a{
 }
 
 @media screen and (max-width: 576px){
-    nav a{
+    .navbar a{
         font-size: 16px !important;
     }
 }
@@ -81,7 +84,6 @@ nav a{
 @media screen and (min-width:0px) and (max-width:1023px){
     .sottotitoli{
         font-size: 50px;
-        text-shadow: 1px 1px 1px black;
         font-weight: 500;
     }
 }
